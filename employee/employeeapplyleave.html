@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply leave</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- navigation -->
+    <nav class="navbar nav-bg fixed-top">
+      <!-- offcanvas-toggler -->
+
+      <div class="container-fluid">
+        <button
+          class="btn d-md-none py-0 mt-1 pl-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling"
+        >
+          <i
+            class="bx bx-menu-alt-right fs-4"
+            data-bs-target="#offcanvasScrolling"
+          ></i>
+        </button>
+        <a class="me-auto d-md-none"
+          ><img src="/assets/images/logoonly.svg" alt=""
+        /></a>
+        <form class="d-flex ms-auto mt-2 d-none d-md-block" role="search">
+          <div class="input-group mb-1">
+            <button
+              class="btn btn-dark btn-right"
+              type="button"
+              id="button-addon1"
+            >
+              <i class="bx bx-search fs-5 te text-secondary"></i>
+            </button>
+            <input
+              type="text"
+              class="form-control search-dark"
+              placeholder=""
+              aria-label="Example text with button addon"
+              aria-describedby="button-addon1"
+            />
+          </div>
+        </form>
+        <div>
+          <button class="btn fs-4 py-0"><i class="bx bx-bell"></i></button>
+        </div>
+
+        <div class="btn-group">
+          <button
+            type="button"
+            class="btn dropdown-toggle py-0"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span><img src="/assets/images/topprofile.svg" alt="" /></span>
+          </button>
+          <ul
+            class="dropdown-menu dropdown-menu-end dropdown-menu-dark bg-dark"
+          >
+            <a href="/employee/changepassword.html">
+              <li>
+                <button class="dropdown-item text-light" type="button">
+                  <i class="bx bx-cog"></i> Change password
+                </button>
+              </li></a
+            >
+            <a href="/index.html" class="text-decoration-none">
+              <li>
+                <button class="dropdown-item text-light" type="button">
+                  <i class="bx bx-exit"></i> Logout
+                </button>
+              </li></a
+            >
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- responsive form -->
+    <form
+      class="d-flex ms-auto mt-3 py-2 px-3 d-md-none res-search"
+      role="search"
+    >
+      <div class="input-group mt-5">
+        <button
+          class="btn btn-secondary btn-right"
+          type="button"
+          id="button-addon1"
+        >
+          <i class="bx bx-search fs-5 te text-dark"></i>
+        </button>
+        <input
+          type="text"
+          class="form-control search-light text-white"
+          placeholder=""
+          aria-label="Example text with button addon"
+          aria-describedby="button-addon1"
+        />
+      </div>
+    </form>
+    <!-- responsive form -->
+    <div
+      class="offcanvas offcanvas-start sidebar-nav"
+      data-bs-scroll="true"
+      data-bs-backdrop="false"
+      tabindex="-1"
+      id="offcanvasScrolling"
+      aria-labelledby="offcanvasScrollingLabel"
+    >
+      <div class="offcanvas-header px-3 py-4">
+        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+          <img src="/assets/images/logo.svg" alt="" class="mx-3" />
+        </h5>
+        <button
+          type="button"
+          class="btn-close d-md-none btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="list-unstyled px-2 list-ul">
+          <li class="">
+            <div class="text-decoration-none my-2 px-2 py-2 d-block">
+              <span class="px-5"
+                ><img
+                  src="/assets/images/profile.svg"
+                  alt=""
+                  width="109px"
+                  height="109px"
+              /></span>
+            </div>
+          </li>
+          <div class="text-center">
+            <li class="text-white">Lessa david</li>
+            <li class="text-secondary">lessadavid100@gmail.com</li>
+          </div>
+          <hr class="text-white" />
+          <li class="">
+            <a
+              href="/employee/employeehome.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+              ><span><i class="bx bx-home"></i></span
+              ><span class="px-2">Home</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/employee/employeeapplyleave.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bx-calendar-check"></i></span
+              ><span class="px-2">Apply leave</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/employee/employeehistory.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bx-spreadsheet"></i></span
+              ><span class="px-2">My leave</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/employee/employeecalendar.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bx-calendar-alt"></i></span
+              ><span class="px-2">Calendar</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/employee/employeeprofile.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bx-user"></i></span
+              ><span class="px-2">Profile</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <main class="mt-md-5 pt-4">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-between">
+          <h6 class="mb-3 text-light">
+            <i class="bx bx-calendar-edit"></i> Apply leave
+          </h6>
+          <a href="/employee/applyingleave.html">
+            <button type="button" class="btn btn-primary">
+              Apply Leave
+            </button></a
+          >
+        </div>
+
+        <div class="row flex-wrap mt-3">
+          <div class="col-lg-2 mb-3">
+            <div class="card grid-bg h-100">
+              <div class="card-body">
+                <div>
+                  <h3 class="card-title mb-3">
+                    <span class="text-blue">3/20</span>
+                  </h3>
+                  <p>Earned Leave</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 mb-3">
+            <div class="card grid-bg h-100">
+              <div class="card-body">
+                <h3 class="card-title mb-3">
+                  <span class="text-blue">1/16</span>
+                </h3>
+                <p>Casual Leave</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 mb-3">
+            <div class="card grid-bg h-100">
+              <div class="card-body">
+                <h3 class="card-title mb-3">
+                  <span class="text-blue">2/15 </span>
+                </h3>
+                <p>Unpaid leave</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 mb-3">
+            <div class="card grid-bg h-100">
+              <div class="card-body">
+                <h3 class="card-title mb-3">
+                  <span class="text-blue">0/84</span>
+                </h3>
+                <p>Maternity Leave</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 mb-3">
+            <div class="card grid-bg h-100">
+              <div class="card-body">
+                <h3 class="card-title mb-3">
+                  <span class="text-blue">0/14</span>
+                </h3>
+                <p>Sick Leave</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 mb-3">
+            <div class="card grid-bg h-100">
+              <div class="card-body">
+                <h3 class="card-title mb-3">
+                  <span class="text-blue">0/20</span>
+                </h3>
+                <p>Paternity Leave</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 mb-3">
+            <div class="card grid-bg h-100">
+              <div class="card-body">
+                <h3 class="card-title mb-3">
+                  <span class="text-blue">1/18</span>
+                </h3>
+                <p>Sabbatical Leave</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 mb-3">
+            <div class="card grid-bg h-100">
+              <div class="card-body" id="invoice">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h5 class="card-title">
+                      <i class="bx bx-shield-plus"></i> Leave Policies
+                    </h5>
+                  </div>
+                  <div>
+                    <button class="btn btn-primary" onclick="generatePDF()">
+                      Export
+                    </button>
+                  </div>
+                </div>
+
+                <h6>Casual leave (CL)</h6>
+                <ul>
+                  <li>
+                    Eligibility:Casual leave is available to all regular
+                    employees of Waveworks who have completed their probationary
+                    period, which is usually 6 months from the date of hire.
+                  </li>
+                  <li>
+                    Duration:Employees are entitled to 12 days of casual leave
+                    per calendar year.
+                  </li>
+                </ul>
+                <h6>Earned leave / Privilege leave (EL/PL)</h6>
+                <ul>
+                  <li>
+                    Eligibility: All full-time and part-time employees are
+                    eligible for Earned leave / Privilege leave (EL/PL).
+                  </li>
+                  <li>
+                    Accrual: Employees accrue vacation days based on their
+                    length of service, as follows:
+                  </li>
+                  <li>Less than 1 year: 10 days per year</li>
+                  <li>1-5 years: 15 days per year</li>
+                </ul>
+                <h6>Sick Leave (SL)</h6>
+                <ul>
+                  <li>
+                    Eligibility: All employees are eligible for sick leave.
+                  </li>
+                  <li>
+                    Accrual: Sick leave is accrued at the rate of 1 day per
+                    month.
+                  </li>
+                  <li>
+                    Request Procedure: Employees should notify their supervisor
+                    as soon as possible when taking sick leave.Medical
+                    documentation may be required for leaves exceeding 12
+                    consecutive days.
+                  </li>
+                </ul>
+                <h6>Maternity/Paternity Leave (ML/PL)</h6>
+                <ul>
+                  <li>
+                    Eligibility: Employees who have completed at least 12 months
+                    of service are eligible.
+                  </li>
+                  <li>
+                    Duration: 24 weeks for maternity leave and 2 weeks for
+                    paternity leave.
+                  </li>
+                  <li>
+                    Request Procedure: Employees should inform HR at least 2
+                    weeks before the intended start date of leave and provide
+                    the necessary documentation.
+                  </li>
+                </ul>
+                <h6>Unpaid Leave (UL)</h6>
+                <ul>
+                  <li>
+                    Eligibility:Unpaid leave is available to all regular
+                    full-time employees who have completed at least 12 months of
+                    continuous service with the company.
+                  </li>
+                  <li>
+                    Duration: Unpaid leave can range from a minimum of 12 days
+                    to a maximum of 8 months.
+                  </li>
+                </ul>
+                <h6>Sabbatical Leave (SL)</h6>
+                <ul>
+                  <li>
+                    Eligibility: Sabbatical leave is available to employees who
+                    have completed a specified number of years of service,
+                    typically ranging from 5 to 10 years.
+                  </li>
+                  <li>Duration: 2 weeks for Sabbactical leave.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+<script>
+  function generatePDF() {
+    const element = document.getElementById("invoice");
+    html2pdf().from(element).save();
+  }
+</script>

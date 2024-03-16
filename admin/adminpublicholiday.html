@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin home</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css"
+    />
+    <style>
+      input {
+        background-color: transparent !important;
+        color: white !important;
+      }
+      select {
+        background-color: #111010 !important;
+        color: white !important;
+      }
+      .page-link {
+        background-color: #111010 !important;
+        color: white !important;
+      }
+      label {
+        color: white !important;
+      }
+      .dataTables_info {
+        color: white !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navigation -->
+    <nav class="navbar nav-bg fixed-top">
+      <!-- offcanvas-toggler -->
+
+      <div class="container-fluid">
+        <button
+          class="btn d-md-none py-0 mt-1 pl-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling"
+        >
+          <i
+            class="bx bx-menu-alt-right fs-4"
+            data-bs-target="#offcanvasScrolling"
+          ></i>
+        </button>
+        <a class="me-auto d-md-none"
+          ><img src="/assets/images/logoonly.svg" alt=""
+        /></a>
+        <form class="d-flex ms-auto mt-2 d-none d-md-block" role="search">
+          <div class="input-group mb-1">
+            <button
+              class="btn btn-dark btn-right"
+              type="button"
+              id="button-addon1"
+            >
+              <i class="bx bx-search fs-5 te text-secondary"></i>
+            </button>
+            <input
+              type="text"
+              class="form-control search-dark"
+              placeholder=""
+              aria-label="Example text with button addon"
+              aria-describedby="button-addon1"
+            />
+          </div>
+        </form>
+        <div>
+          <button class="btn fs-4 py-0"><i class="bx bx-bell"></i></button>
+        </div>
+
+        <div class="btn-group">
+          <button
+            type="button"
+            class="btn dropdown-toggle py-0"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span><img src="/assets/images/topprofile.svg" alt="" /></span>
+          </button>
+          <ul
+            class="dropdown-menu dropdown-menu-end dropdown-menu-dark bg-dark"
+          >
+            <a
+              href="/employee/changepassword.html"
+              class="text-decoration-none"
+            >
+              <li>
+                <button class="dropdown-item text-light" type="button">
+                  <i class="bx bx-cog"></i> Change password
+                </button>
+              </li></a
+            >
+            <a href="/index.html" class="text-decoration-none">
+              <li>
+                <button class="dropdown-item text-light" type="button">
+                  <i class="bx bx-exit"></i> Logout
+                </button>
+              </li></a
+            >
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- responsive form -->
+    <form
+      class="d-flex ms-auto mt-3 py-2 px-3 d-md-none res-search"
+      role="search"
+    >
+      <div class="input-group mt-5">
+        <button
+          class="btn btn-secondary btn-right"
+          type="button"
+          id="button-addon1"
+        >
+          <i class="bx bx-search fs-5 te text-dark"></i>
+        </button>
+        <input
+          type="text"
+          class="form-control search-light text-white"
+          placeholder=""
+          aria-label="Example text with button addon"
+          aria-describedby="button-addon1"
+        />
+      </div>
+    </form>
+    <!-- responsive form -->
+    <div
+      class="offcanvas offcanvas-start sidebar-nav"
+      data-bs-scroll="true"
+      data-bs-backdrop="false"
+      tabindex="-1"
+      id="offcanvasScrolling"
+      aria-labelledby="offcanvasScrollingLabel"
+    >
+      <div class="offcanvas-header px-3 py-4">
+        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+          <img src="/assets/images/logo.svg" alt="" class="mx-3" />
+        </h5>
+        <button
+          type="button"
+          class="btn-close d-md-none btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="list-unstyled px-2 list-ul">
+          <li class="">
+            <div class="text-decoration-none my-2 px-2 py-2 d-block">
+              <span class="px-5"
+                ><img
+                  src="/assets/images/profile.svg"
+                  width="109px"
+                  height="109px"
+                  alt=""
+              /></span>
+            </div>
+          </li>
+          <div class="text-center">
+            <li class="text-white">Lessa david</li>
+            <li class="text-secondary">lessadavid100@gmail.com</li>
+          </div>
+          <hr class="text-white" />
+          <li class="">
+            <a
+              href="/admin/adminhome.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+              ><span><i class="bx bx-home"></i></span
+              ><span class="px-2">Home</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/admin/adminemployeemange.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bx-group"></i></span
+              ><span class="px-2">User management</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/admin/adminsystemmange.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bx-laptop"></i></span
+              ><span class="px-2">System management</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/admin/adminprofile.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bx-user"></i></span
+              ><span class="px-2">Profile</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <main class="mt-md-5 pt-md-2">
+      <div>
+        <ul class="d-flex column-gap-3 list-unstyled bg-dark">
+          <li class="p-3">
+            <a
+              href="/admin/adminsystemmange.html"
+              class="text-decoration-none text-light"
+              >Leave Type</a
+            >
+          </li>
+          <li class="bg-secondary bg-opacity-25 p-3">
+            <a
+              href="/admin/adminpublicholiday.html"
+              class="text-decoration-none text-light"
+              >Public holidays</a
+            >
+          </li>
+          <li class="p-3">
+            <a
+              href="/admin/adminemail.html"
+              class="text-decoration-none text-light"
+              >Email Template</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- Add Holiday Modal -->
+      <div
+        class="modal fade"
+        id="addHolidayModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="addHolidayModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content grid-bg text-light">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addHolidayModalLabel">Add Holiday</h5>
+              <button
+                type="button"
+                class="close btn bg-secondary"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <i class="bi bi-x-lg"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- Holiday Form -->
+              <form id="addHolidayForm">
+                <div class="form-group">
+                  <label for="holidayName" class="mb-3">Holiday:</label>
+                  <input
+                    type="text"
+                    class="form-control bg-transparent border-secondary text-light mb-2"
+                    id="holidayName"
+                    required
+                    onkeyup="validateHolidayName()"
+                  />
+                  <span id="holidayNameErrorMessage" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                  <label for="holidayDate" class="mb-3">Date:</label>
+                  <input
+                    type="date"
+                    class="form-control bg-transparent border-secondary text-light mb-3"
+                    id="holidayDate"
+                    required
+                    onkeyup="validateHolidayDate()"
+                  />
+                  <span id="holidayDateErrorMessage" class="text-danger"></span>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="addHoliday()"
+                >
+                  Add
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Edit Holiday Modal -->
+      <div
+        class="modal fade"
+        id="editHolidayModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="editHolidayModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content grid-bg">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editHolidayModalLabel">
+                Edit Holiday
+              </h5>
+              <button
+                type="button"
+                class="close btn bg-secondary"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <i class="bi bi-x-lg"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- Holiday Edit Form -->
+              <form id="editHolidayForm">
+                <div class="form-group">
+                  <label for="editHolidayName" class="mb-3">Holiday:</label>
+                  <input
+                    type="text"
+                    class="form-control bg-transparent border-secondary text-light mb-2"
+                    id="editHolidayName"
+                    readonly
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="editHolidayDate" class="mb-2">Date:</label>
+                  <input
+                    type="date"
+                    class="form-control bg-transparent border-secondary text-light mb-3"
+                    id="editHolidayDate"
+                    required
+                  />
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="saveEditedHoliday()"
+                >
+                  Save Changes
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="d-flex justify-content-end pb-3">
+          <button
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#addHolidayModal"
+          >
+            Add Holiday
+          </button>
+        </div>
+        <div class="table-responsive">
+          <table class="table-custom text-white" id="example">
+            <thead>
+              <th scope="col">Holiday</th>
+              <th scope="col">Date</th>
+              <th scope="col">Action</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>New Year's Day</td>
+                <td>2023-01-01</td>
+                <td>
+                  <div class="d-flex column-gap-1">
+                    <div>
+                      <button
+                        class="btn btn-dark"
+                        onclick="deleteHoliday(this)"
+                      >
+                        <i class="bx bx-trash"></i>
+                      </button>
+                    </div>
+                    <div>
+                      <button class="btn btn-dark" onclick="editHoliday(this)">
+                        <i class="bx bxs-edit"></i>
+                      </button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Lohri</td>
+                <td>2024-01-13</td>
+                <td>
+                  <div class="d-flex column-gap-1">
+                    <div>
+                      <button
+                        class="btn btn-dark"
+                        onclick="deleteHoliday(this)"
+                      >
+                        <i class="bx bx-trash"></i>
+                      </button>
+                    </div>
+                    <div>
+                      <button class="btn btn-dark" onclick="editHoliday(this)">
+                        <i class="bx bxs-edit"></i>
+                      </button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Makar Sankranti</td>
+                <td>2024-01-14</td>
+                <td>
+                  <div class="d-flex column-gap-1">
+                    <div>
+                      <button
+                        class="btn btn-dark"
+                        onclick="deleteHoliday(this)"
+                      >
+                        <i class="bx bx-trash"></i>
+                      </button>
+                    </div>
+                    <div>
+                      <button class="btn btn-dark" onclick="editHoliday(this)">
+                        <i class="bx bxs-edit"></i>
+                      </button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Pongal</td>
+                <td>2024-01-15</td>
+                <td>
+                  <div class="d-flex column-gap-1">
+                    <div>
+                      <button
+                        class="btn btn-dark"
+                        onclick="deleteHoliday(this)"
+                      >
+                        <i class="bx bx-trash"></i>
+                      </button>
+                    </div>
+                    <div>
+                      <button class="btn btn-dark" onclick="editHoliday(this)">
+                        <i class="bx bxs-edit"></i>
+                      </button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Guru Govind Singh Jayanti</td>
+                <td>2024-01-17</td>
+                <td>
+                  <div class="d-flex column-gap-1">
+                    <div>
+                      <button
+                        class="btn btn-dark"
+                        onclick="deleteHoliday(this)"
+                      >
+                        <i class="bx bx-trash"></i>
+                      </button>
+                    </div>
+                    <div>
+                      <button class="btn btn-dark" onclick="editHoliday(this)">
+                        <i class="bx bxs-edit"></i>
+                      </button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Republic Day</td>
+                <td>2024-01-26</td>
+                <td>
+                  <div class="d-flex column-gap-1">
+                    <div>
+                      <button
+                        class="btn btn-dark"
+                        onclick="deleteHoliday(this)"
+                      >
+                        <i class="bx bx-trash"></i>
+                      </button>
+                    </div>
+                    <div>
+                      <button class="btn btn-dark" onclick="editHoliday(this)">
+                        <i class="bx bxs-edit"></i>
+                      </button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+      <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+      <script>
+        $(document).ready(function () {
+          $("#example").DataTable();
+        });
+        function validateHolidayName() {
+          var holidayName = document.getElementById("holidayName").value;
+          var holidayNameErrorMessage = document.getElementById(
+            "holidayNameErrorMessage"
+          );
+
+          if (holidayName.trim() === "") {
+            holidayNameErrorMessage.innerText = "Holiday name is required.";
+            return false;
+          } else {
+            holidayNameErrorMessage.innerText = "";
+            return true;
+          }
+        }
+
+        function validateHolidayDate() {
+          var holidayDate = document.getElementById("holidayDate").value;
+          var holidayDateErrorMessage = document.getElementById(
+            "holidayDateErrorMessage"
+          );
+
+          if (holidayDate.trim() === "") {
+            holidayDateErrorMessage.innerText = "Holiday date is required.";
+            return false;
+          } else {
+            holidayDateErrorMessage.innerText = "";
+            return true;
+          }
+        }
+
+        function validateHolidayForm() {
+          var isValidHolidayName = validateHolidayName();
+          var isValidHolidayDate = validateHolidayDate();
+
+          return isValidHolidayName && isValidHolidayDate;
+        }
+
+        function addHoliday() {
+          if (validateHolidayForm()) {
+            var name = document.getElementById("holidayName").value;
+            var date = document.getElementById("holidayDate").value;
+
+            var table = document.querySelector(".table-custom tbody");
+
+            var row = table.insertRow();
+            row.innerHTML = `<td>${name}</td>
+                       <td>${date}</td>
+                       <td>
+                         <div class="d-flex column-gap-1">
+                           <div>
+                             <button class="btn btn-dark" onclick="deleteHoliday(this)">
+                               <i class="bx bx-trash"></i>
+                             </button>
+                           </div>
+                           <div>
+                             <button class="btn btn-dark" onclick="editHoliday(this)">
+                               <i class="bx bxs-edit"></i>
+                             </button>
+                           </div>
+                         </div>
+                       </td>`;
+
+            // Clear the form
+            document.getElementById("addHolidayForm").reset();
+
+            // Close the modal
+            $("#addHolidayModal").modal("hide");
+          }
+        }
+        function editHoliday(button) {
+          // Get the row
+          var row = button.closest("tr");
+
+          //  edit modal with existing values
+          document.getElementById("editHolidayName").value =
+            row.cells[0].innerText;
+          document.getElementById("editHolidayDate").value =
+            row.cells[1].innerText;
+
+          // Show the edit modal
+          $("#editHolidayModal").modal("show");
+        }
+
+        function saveEditedHoliday() {
+          // Get edited values
+          var name = document.getElementById("editHolidayName").value;
+          var date = document.getElementById("editHolidayDate").value;
+
+          // Updating the row with edited values
+          var table = document.querySelector(".table-custom tbody");
+          var row = Array.from(table.rows).find(
+            (r) => r.cells[0].innerText === name
+          );
+
+          if (row) {
+            row.cells[1].innerText = date;
+          }
+
+          // Clear the form
+          document.getElementById("editHolidayForm").reset();
+
+          // Close the modal
+          $("#editHolidayModal").modal("hide");
+        }
+
+        function deleteHoliday(button) {
+          // Get the row
+          var row = button.closest("tr");
+
+          // Remove the row
+          row.remove();
+        }
+      </script>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

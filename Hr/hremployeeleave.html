@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HR home</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- navigation -->
+    <nav class="navbar nav-bg fixed-top">
+      <!-- offcanvas-toggler -->
+
+      <div class="container-fluid">
+        <button
+          class="btn d-md-none py-0 mt-1 pl-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling"
+        >
+          <i
+            class="bx bx-menu-alt-right fs-4"
+            data-bs-target="#offcanvasScrolling"
+          ></i>
+        </button>
+        <a class="me-auto d-md-none"
+          ><img src="/assets/images/logoonly.svg" alt=""
+        /></a>
+        <form class="d-flex ms-auto mt-2 d-none d-md-block" role="search">
+          <div class="input-group mb-1">
+            <button
+              class="btn btn-dark btn-right"
+              type="button"
+              id="button-addon1"
+            >
+              <i class="bx bx-search fs-5 te text-secondary"></i>
+            </button>
+            <input
+              type="text"
+              class="form-control search-dark"
+              placeholder=""
+              aria-label="Example text with button addon"
+              aria-describedby="button-addon1"
+            />
+          </div>
+        </form>
+        <div>
+          <button class="btn fs-4 py-0"><i class="bx bx-bell"></i></button>
+        </div>
+
+        <div class="btn-group">
+          <button
+            type="button"
+            class="btn dropdown-toggle py-0"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span><img src="/assets/images/topprofile.svg" alt="" /></span>
+          </button>
+          <ul
+            class="dropdown-menu dropdown-menu-end dropdown-menu-dark bg-dark"
+          >
+            <a
+              href="/employee/changepassword.html"
+              class="text-decoration-none"
+            >
+              <li>
+                <button class="dropdown-item text-light" type="button">
+                  <i class="bx bx-cog"></i> Change password
+                </button>
+              </li></a
+            >
+            <a href="/index.html" class="text-decoration-none">
+              <li>
+                <button class="dropdown-item text-light" type="button">
+                  <i class="bx bx-exit"></i> Logout
+                </button>
+              </li></a
+            >
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- responsive form -->
+    <form
+      class="d-flex ms-auto mt-3 py-2 px-3 d-md-none res-search"
+      role="search"
+    >
+      <div class="input-group mt-5">
+        <button
+          class="btn btn-secondary btn-right"
+          type="button"
+          id="button-addon1"
+        >
+          <i class="bx bx-search fs-5 te text-dark"></i>
+        </button>
+        <input
+          type="text"
+          class="form-control search-light text-white"
+          placeholder=""
+          aria-label="Example text with button addon"
+          aria-describedby="button-addon1"
+        />
+      </div>
+    </form>
+    <!-- responsive form -->
+    <div
+      class="offcanvas offcanvas-start sidebar-nav"
+      data-bs-scroll="true"
+      data-bs-backdrop="false"
+      tabindex="-1"
+      id="offcanvasScrolling"
+      aria-labelledby="offcanvasScrollingLabel"
+    >
+      <div class="offcanvas-header px-3 py-4">
+        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+          <img src="/assets/images/logo.svg" alt="" class="mx-3" />
+        </h5>
+        <button
+          type="button"
+          class="btn-close d-md-none btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="list-unstyled px-2 list-ul">
+          <li class="">
+            <div class="text-decoration-none my-2 px-2 py-2 d-block">
+              <span class="px-5"
+                ><img
+                  src="/assets/images/profile.svg"
+                  width="109px"
+                  height="109px"
+                  alt=""
+              /></span>
+            </div>
+          </li>
+          <div class="text-center">
+            <li class="text-white">Lessa david</li>
+            <li class="text-secondary">lessadavid100@gmail.com</li>
+          </div>
+          <hr class="text-white" />
+          <li class="">
+            <a
+              href="/Hr/hrhome.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+              ><span><i class="bx bx-home"></i></span
+              ><span class="px-2">Home</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/Hr/hremployees.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bx-group"></i></span
+              ><span class="px-2">Employee</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/Hr/hremployeeleave.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bx-detail"></i></span
+              ><span class="px-2">Leave records</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/Hr/hrpolicy.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bx-check-shield"></i></span
+              ><span class="px-2">Policy</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/Hr/hrprofile.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bx-user"></i></span
+              ><span class="px-2">Profile</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+      <main class="mt-md-5 pt-4">
+        <div class="container-fluid">
+          <div class="d-flex justify-content-between mb-3">
+        <div> <h6 class="text-light py-2" ><i class='bx bxs-user-detail' ></i> Leave records</h6> </div>
+        <button class="btn btn-primary" onclick="generatePDF()">
+          Export
+        </button>
+      </div>
+
+          <div class="table-responsive "id="invoice">
+          <table class="table-custom mb-3" id="example" >
+            <thead>
+            <tr>
+             
+             
+              <th>Emp Id</th>
+              <th >Name</th> 
+              <th>Email</th>
+              
+              <th >Department</th>
+              <th >Designation</th>
+              <th>Action</th> 
+            
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+           
+              <td>E010</td>
+              <td>David Lee</td>
+              <td>davidlee@gmail.com</td>
+            
+              <td>Management</td>
+              <td>Development</td>
+              <td><button class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#leaveHistoryModal1">View</button></td>
+            </tr>
+            <tr>
+             <td>E021 </td>
+              <td>Shyla Senya</td>
+              <td>shylasenya@gmail.com</td>
+            
+              <td>IT</td>
+              <td>Designer</td>
+              <td><button class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#leaveHistoryModal1">View</button></td>
+            </tr>
+            <tr>
+             
+              <td>E020</td>
+              <td>Austin Lomen</td>
+              <td>autinlomen@gmail.com</td>
+              
+              <td>Management</td>
+              <td>Administration</td>
+              <td><button class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#leaveHistoryModal1">View</button></td>
+            </tr>
+            <tr>
+             
+              <td>E030</td>
+              <td>Alex Fernandez</td>
+              <td>alexfernandex@gmail.com</td>  
+              <td>IT</td>
+              <td>Team member</td>
+              <td><button class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#leaveHistoryModal1">View</button></td>
+            </tr>
+            <tr>
+             
+              <td>E010</td>
+              <td>Sandy Mary</td>
+              <td>sandymary@gmail.com</td>
+             
+              <td>Marketing</td>
+              <td>Sales</td>
+              <td><button class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#leaveHistoryModal1">View</button></td>
+            </tr>
+            <tr>
+            
+              <td>E046</td>
+              <td>Godwin Gred</td>
+              <td>godwingred@gmail.com</td>
+              <td>Management</td>
+              <td>Administration</td>
+              <td><button class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#leaveHistoryModal1">View</button></td>
+            </tr>
+      <tr>
+     
+            <td>E020</td>
+            <td>Austin loman</td>
+            <td>autinlomen@gmail.com</td>
+            <td>Management</td>
+            <td>Administration</td>
+            <td><button class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#leaveHistoryModal1">View</button></td>
+          </tr>
+          <tr>
+           
+            <td>E030</td>
+            <td>Alex Fernandez</td>
+            <td>alexfernandex@gmail.com</td>
+            <td>IT</td>
+            <td>Team member</td>
+            <td><button class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#leaveHistoryModal1">View</button></td>
+          </tr>
+          <tr>
+         
+            <td>E010</td>
+            <td>Sandy Mary</td>
+            <td>sandymary@gmail.com</td>
+            <td>Marketing</td>
+            <td>Sales</td>
+            <td><button class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#leaveHistoryModal1">View</button></td>
+          </tr>
+          <tr>
+            <td>E046</td>
+            <td>Godwin Gred</td>
+            <td>godwingred@gmail.com</td>
+            <td>Management</td>
+            <td>Administration</td>
+            <td><button class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#leaveHistoryModal1">View</button></td>
+          </tr>
+          <tr>
+           
+          <td>E046</td>
+            <td>Godwin Gred</td>
+            <td>godwingred@gmail.com</td>
+            <td>Management</td>
+            <td>Administration</td>
+            <td><button class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#leaveHistoryModal1">View</button></td>
+          </tr>
+          <tr>
+            <td>E046</td>
+            <td>Harward kilo</td>
+            <td>harward@gmail.com</td>
+            <td>Management</td>
+            <td>Administration</td>
+            <td><button class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#leaveHistoryModal1">View</button></td>
+          </tr>
+          <tr>
+        
+            <td>E046</td>
+            <td>Jessy</td>
+            <td>godwingred@gmail.com</td>
+            <td>Management</td>
+            <td>Administration</td>
+            <td><button class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#leaveHistoryModal1">View</button></td>
+          </tr>
+          <tr>
+            <td>E001</td>
+            <td>John Doe</td>
+            <td>johndoe@gmail.com</td>
+            <td>Management</td>
+            <td>Development</td>
+            <td><button class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#leaveHistoryModal1">View</button></td>
+        </tr>
+        <tr>
+            <td>E002</td>
+            <td>Alice Smith</td>
+            <td>alicesmith@gmail.com</td>
+            <td>IT</td>
+            <td>Designer</td>
+            <td><button class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#leaveHistoryModal1">View</button></td>
+        </tr>
+        <tr>
+            <td>E003</td>
+            <td>Michael Johnson</td>
+            <td>michaeljohnson@gmail.com</td>
+            <td>Management</td>
+            <td>Administration</td>
+            <td><button class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#leaveHistoryModal1">View</button></td>
+        </tr>
+        <tr>
+  </tbody>
+          </table>
+          <!-- Leave History Modal -->
+      <div class="modal fade" id="leaveHistoryModal1" tabindex="-1" aria-labelledby="leaveHistoryModalLabel1"
+      aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content grid-bg">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="leaveHistoryModalLabel1">Leave History - David Lee (E010)</h5>
+                  <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <p><strong>Leave History for David Lee:</strong></p>
+                  No history of leaves.
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+        </div>
+      </main>
+      <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+      <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+      <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"
+      ></script>
+      <script>
+        function generatePDF() {
+          const element = document.getElementById("invoice");
+          html2pdf().from(element).save();
+        }
+        $(document).ready(function () {
+        $("#example").DataTable();
+      });
+      </script>
+  </body>
+</html>

@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin home</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css"
+    />
+    <style>
+      input {
+        background-color: transparent !important;
+        color: white !important;
+      }
+      select {
+        background-color: #111010 !important;
+        color: white !important;
+      }
+      .page-link {
+        background-color: #111010 !important;
+        color: white !important;
+      }
+      label{
+        color: white !important;
+      }
+      .dataTables_info{
+        color: white !important;
+      }
+      </style>
+  </head>
+  <body>
+    <!-- navigation -->
+    <nav class="navbar nav-bg fixed-top">
+      <!-- offcanvas-toggler -->
+
+      <div class="container-fluid">
+        <button
+          class="btn d-md-none py-0 mt-1 pl-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling"
+        >
+          <i
+            class="bx bx-menu-alt-right fs-4"
+            data-bs-target="#offcanvasScrolling"
+          ></i>
+        </button>
+        <a class="me-auto d-md-none"
+          ><img src="/assets/images/logoonly.svg" alt=""
+        /></a>
+        <form class="d-flex ms-auto mt-2 d-none d-md-block" role="search">
+          <div class="input-group mb-1">
+            <button
+              class="btn btn-dark btn-right"
+              type="button"
+              id="button-addon1"
+            >
+              <i class="bx bx-search fs-5 te text-secondary"></i>
+            </button>
+            <input
+              type="text"
+              class="form-control search-dark"
+              placeholder=""
+              aria-label="Example text with button addon"
+              aria-describedby="button-addon1"
+            />
+          </div>
+        </form>
+        <div>
+          <button class="btn fs-4 py-0"><i class="bx bx-bell"></i></button>
+        </div>
+
+        <div class="btn-group">
+          <button
+            type="button"
+            class="btn dropdown-toggle py-0"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span><img src="/assets/images/topprofile.svg" alt="" /></span>
+          </button>
+          <ul
+            class="dropdown-menu dropdown-menu-end dropdown-menu-dark bg-dark"
+          >
+            <a
+              href="/employee/changepassword.html"
+              class="text-decoration-none"
+            >
+              <li>
+                <button class="dropdown-item text-light" type="button">
+                  <i class="bx bx-cog"></i> Change password
+                </button>
+              </li></a
+            >
+            <a href="/index.html" class="text-decoration-none">
+              <li>
+                <button class="dropdown-item text-light" type="button">
+                  <i class="bx bx-exit"></i> Logout
+                </button>
+              </li></a
+            >
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- responsive form -->
+    <form
+      class="d-flex ms-auto mt-3 py-2 px-3 d-md-none res-search"
+      role="search"
+    >
+      <div class="input-group mt-5">
+        <button
+          class="btn btn-secondary btn-right"
+          type="button"
+          id="button-addon1"
+        >
+          <i class="bx bx-search fs-5 te text-dark"></i>
+        </button>
+        <input
+          type="text"
+          class="form-control search-light text-white"
+          placeholder=""
+          aria-label="Example text with button addon"
+          aria-describedby="button-addon1"
+        />
+      </div>
+    </form>
+    <!-- responsive form -->
+    <div
+      class="offcanvas offcanvas-start sidebar-nav"
+      data-bs-scroll="true"
+      data-bs-backdrop="false"
+      tabindex="-1"
+      id="offcanvasScrolling"
+      aria-labelledby="offcanvasScrollingLabel"
+    >
+      <div class="offcanvas-header px-3 py-4">
+        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+          <img src="/assets/images/logo.svg" alt="" class="mx-3" />
+        </h5>
+        <button
+          type="button"
+          class="btn-close d-md-none btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="list-unstyled px-2 list-ul">
+          <li class="">
+            <div class="text-decoration-none my-2 px-2 py-2 d-block">
+              <span class="px-5"
+                ><img
+                  src="/assets/images/profile.svg"
+                  width="109px"
+                  height="109px"
+                  alt=""
+              /></span>
+            </div>
+          </li>
+          <div class="text-center">
+            <li class="text-white">Lessa david</li>
+            <li class="text-secondary">lessadavid100@gmail.com</li>
+          </div>
+          <hr class="text-white" />
+          <li class="">
+            <a
+              href="/admin/adminhome.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+              ><span><i class="bx bx-home"></i></span
+              ><span class="px-2">Home</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/admin/adminemployeemange.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bx-group"></i></span
+              ><span class="px-2">User management</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/admin/adminsystemmange.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bx-laptop"></i></span
+              ><span class="px-2">System management</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/admin/adminprofile.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bx-user"></i></span
+              ><span class="px-2">Profile</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <main class="mt-md-5 pt-4">
+      <div class="container-fluid">
+        <!-- Add Employee Modal -->
+        <div
+        class="modal fade"
+        id="addEmployeeModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="addEmployeeModalLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addEmployeeModalLabel">
+                        Add Employee
+                    </h5>
+                    <button
+                        class="close btn bg-secondary"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                    >
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Employee Form -->
+                    <form id="employeeForm">
+                        <div class="form-group mb-3">
+                            <label for="employeeId" class="mb-2">Employee ID  <span class="text-danger">*</span></label>
+                            <input
+                                type="text"
+                                class="form-control bg-transparent border-secondary text-light"
+                                id="employeeId"
+                              
+                                onkeyup="validateId(this.value)"
+                            />
+                            <small class="text-danger error-message" id="errorEmployeeId"></small>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="employeeName" class="mb-2">Name  <span class="text-danger">*</span></label>
+                            <input
+                                type="text"
+                                class="form-control bg-transparent border-secondary text-light"
+                                id="employeeName"
+                              
+                                onkeyup="validateName(this.value)"
+                            />
+                            <small class="text-danger error-message" id="errorEmployeeName"></small>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="employeeEmail" class="mb-2">Email  <span class="text-danger">*</span></label>
+                            <input
+                                type="email"
+                                class="form-control bg-transparent border-secondary text-light"
+                                id="employeeEmail"
+                              
+                                onkeyup="validateEmail(this.value)"
+                            />
+                            <small class="text-danger error-message" id="errorEmployeeEmail"></small>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="employeeDepartment" class="mb-2"
+                            >Department  <span class="text-danger">*</span></label
+                            >
+                            <input
+                                type="text"
+                                class="form-control bg-transparent border-secondary text-light"
+                                id="employeeDepartment"
+                              
+                                onkeyup="validateDepartment(this.value)"
+                            />
+                            <small class="text-danger error-message" id="errorEmployeeDepartment"></small>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="employeeDesignation" class="mb-2"
+                            >Designation  <span class="text-danger">*</span></label
+                            >
+                            <input
+                                type="text"
+                                class="form-control bg-transparent border-secondary text-light"
+                                id="employeeDesignation"
+                              
+                                onkeyup="validateDesignation(this.value)"
+                            />
+                            <small class="text-danger error-message" id="errorEmployeeDesignation"></small>
+                        </div>
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            onclick="addEmployee()"
+                        >
+                            Add
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+
+        <!-- Edit Employee Modal -->
+        <div
+          class="modal fade"
+          id="editEmployeeModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="editEmployeeModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark text-light">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editEmployeeModalLabel">
+                  Edit Employee
+                </h5>
+                <button
+                  type="button"
+                  class="close btn bg-secondary"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <i class="bi bi-x-lg"></i>
+                </button>
+              </div>
+              <div class="modal-body">
+                <!-- Employee Edit Form -->
+                <form id="editEmployeeForm">
+                  <div class="form-group mb-3">
+                    <label for="editEmployeeId" class="mb-2"
+                      >Employee ID:</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control bg-transparent border-secondary text-light"
+                      id="editEmployeeId" oncli
+                      readonly
+                    />
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="editEmployeeName" class="mb-2">Name <span class="text-danger">*</span></label>
+                    <input
+                      type="text"
+                      class="form-control bg-transparent border-secondary text-light"
+                      id="editEmployeeName"
+                   
+                    />
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="editEmployeeEmail" class="mb-2">Email  <span class="text-danger">*</span></label>
+                    <input
+                      type="email"
+                      class="form-control bg-transparent border-secondary text-light"
+                      id="editEmployeeEmail"
+                   
+                    />
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="editEmployeeDepartment" class="mb-2"
+                      >Department  <span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control bg-transparent border-secondary text-light"
+                      id="editEmployeeDepartment"
+                  
+                    />
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="editEmployeeDesignation" class="mb-2"
+                      >Designation  <span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control bg-transparent border-secondary text-light"
+                      id="editEmployeeDesignation"
+                    
+                    />
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    onclick="saveEditedEmployee()"
+                  >
+                    Save Changes
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid mt-3">
+          <div class="d-flex justify-content-between mb-3">
+            <div class="text-light">
+              <h6><i class="bx bx-user"></i> User Management</h6>
+            </div>
+            <div>
+              <button
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#addEmployeeModal"
+              >
+                Add Employee
+              </button>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table-custom" id="example">
+              <thead>
+                <th scope="col">Employee Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email Id</th>
+                <th scope="col">Department</th>
+                <th scope="col">Designation</th>
+                <th scope="col">Action</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>E010</td>
+                  <td>David lee</td>
+                  <td>davidlee@gmail.com</td>
+                  <td>IT</td>
+                  <td>Development</td>
+                  <td>
+                    <div class="d-flex column-gap-1">
+                      <div>
+                        <button
+                          class="btn btn-dark"
+                          onclick="deleteEmployee(this)"
+                        >
+                          <i class="bx bx-trash"></i>
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          class="btn btn-dark"
+                          onclick="editEmployee(this)"
+                        >
+                          <i class="bx bxs-edit"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>E057</td>
+                  <td>Shyla shre</td>
+                  <td>shylashre@gmail.com</td>
+                  <td>Finance</td>
+                  <td>Mangement</td>
+                  <td>
+                    <div class="d-flex column-gap-1">
+                      <div>
+                        <button
+                          class="btn btn-dark"
+                          onclick="deleteEmployee(this)"
+                        >
+                          <i class="bx bx-trash"></i>
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          class="btn btn-dark"
+                          onclick="editEmployee(this)"
+                        >
+                          <i class="bx bxs-edit"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>E034</td>
+                  <td>Aamla desi</td>
+                  <td>aamladesi@gmail.com</td>
+                  <td>Finance</td>
+                  <td>management</td>
+                  <td>
+                    <div class="d-flex column-gap-1">
+                      <div>
+                        <button
+                          class="btn btn-dark"
+                          onclick="deleteEmployee(this)"
+                        >
+                          <i class="bx bx-trash"></i>
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          class="btn btn-dark"
+                          onclick="editEmployee(this)"
+                        >
+                          <i class="bx bxs-edit"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>E043</td>
+                  <td>Sandy mary</td>
+                  <td>sandymary@gmail.com</td>
+                  <td>IT</td>
+                  <td>Design</td>
+                  <td>
+                    <div class="d-flex column-gap-1">
+                      <div>
+                        <button
+                          class="btn btn-dark"
+                          onclick="deleteEmployee(this)"
+                        >
+                          <i class="bx bx-trash"></i>
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          class="btn btn-dark"
+                          onclick="editEmployee(this)"
+                        >
+                          <i class="bx bxs-edit"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>E010</td>
+                  <td>Farad gezy</td>
+                  <td>faradgezy@gmail.com</td>
+                  <td>IT</td>
+                  <td>Testing</td>
+                  <td>
+                    <div class="d-flex column-gap-1">
+                      <div>
+                        <button
+                          class="btn btn-dark"
+                          onclick="deleteEmployee(this)"
+                        >
+                          <i class="bx bx-trash"></i>
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          class="btn btn-dark"
+                          onclick="editEmployee(this)"
+                        >
+                          <i class="bx bxs-edit"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>E056</td>
+                  <td>Vanma gardy</td>
+                  <td>vanmagrady@gmail.com</td>
+                  <td>IT</td>
+                  <td>Testing</td>
+                  <td>
+                    <div class="d-flex column-gap-1">
+                      <div>
+                        <button
+                          class="btn btn-dark"
+                          onclick="deleteEmployee(this)"
+                        >
+                          <i class="bx bx-trash"></i>
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          class="btn btn-dark"
+                          onclick="editEmployee(this)"
+                        >
+                          <i class="bx bxs-edit"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+   
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+  $(document).ready(function () {
+        $("#example").DataTable();
+      });
+
+     function addEmployee() {
+    // Get input values
+    var id = document.getElementById("employeeId").value;
+    var name = document.getElementById("employeeName").value;
+    var email = document.getElementById("employeeEmail").value;
+    var department = document.getElementById("employeeDepartment").value;
+    var designation = document.getElementById("employeeDesignation").value;
+
+    // Clear all error messages
+    clearErrorMessages();
+
+    // Validate all fields
+    var isValid = true;
+
+    // Validate Employee ID
+    isValid = validateId(id) && isValid;
+
+    // Validate Name
+    isValid = validateName(name) && isValid;
+
+    // Validate Email
+    isValid = validateEmail(email) && isValid;
+
+    // Validate Department
+    isValid = validateDepartment(department) && isValid;
+
+    // Validate Designation
+    isValid = validateDesignation(designation) && isValid;
+
+    // preventing the validation if given input is wrong
+    if (!isValid) {
+        return;
+    }
+
+    // Adding employee to the table
+    var table = document.querySelector(".table-custom tbody");
+
+    var row = table.insertRow();
+    row.innerHTML = `<td>${id}</td>
+                 <td>${name}</td>
+                 <td>${email}</td>
+                 <td>${department}</td>
+                 <td>${designation}</td>
+                 <td>
+                  <button
+                      class="btn btn-dark"
+                      onclick="deleteEmployee(this)"
+                    >
+                      <i class="bx bx-trash"></i>
+                    </button>
+               
+                    <button
+                      class="btn btn-dark"
+                      onclick="editEmployee(this)"
+                    >
+                      <i class="bx bxs-edit"></i>
+                    </button>
+                 </td>`;
+
+    // Clearing
+    document.getElementById("employeeForm").reset();
+
+    // Close modal
+    $("#addEmployeeModal").modal("hide");
+}
+
+// Validations
+function validateId(id) {
+    var errorElement = document.getElementById("errorEmployeeId");
+    if (id.trim() === "") {
+        errorElement.innerText = "Employee ID is required";
+        return false;
+    } else {
+        errorElement.innerText = "";
+        return true;
+    }
+}
+
+function validateName(name) {
+    var errorElement = document.getElementById("errorEmployeeName");
+    if (!/^[a-zA-Z\s]*$/.test(name.trim())) {
+        errorElement.innerText = "Name must not contain numbers or special characters";
+        return false;
+    } else {
+        errorElement.innerText = "";
+        return true;
+    }
+} 
+function validateEmail(email) {
+    var errorElement = document.getElementById("errorEmployeeEmail");
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.trim())) {
+        errorElement.innerText = "Invalid email format";
+        return false;
+    } else {
+        errorElement.innerText = "";
+        return true;
+    }
+}
+
+function validateDepartment(department) {
+    var errorElement = document.getElementById("errorEmployeeDepartment");
+    if (department.trim() === "") {
+        errorElement.innerText = "Department is required";
+        return false;
+    } else {
+        errorElement.innerText = "";
+        return true;
+    }
+}
+
+function validateDesignation(designation) {
+    var errorElement = document.getElementById("errorEmployeeDesignation");
+    if (designation.trim() === "") {
+        errorElement.innerText = "Designation is required";
+        return false;
+    } else {
+        errorElement.innerText = "";
+        return true;
+    }
+}
+
+// Clear all error messages
+function clearErrorMessages() {
+    var errorElements = document.querySelectorAll(".error-message");
+    errorElements.forEach(function (element) {
+        element.innerText = "";
+    });
+}
+
+function showError(elementId, message) {
+document.getElementById(elementId).innerHTML = message;
+}
+
+function resetErrorMessages() {
+var errorMessages = document.querySelectorAll(".error-message");
+errorMessages.forEach(function (element) {
+  element.innerHTML = "";
+});
+}
+      function editEmployee(button) {
+        // Getting row
+        var row = button.closest("tr");
+
+        //  existing values
+        document.getElementById("editEmployeeId").value =
+          row.cells[0].innerText;
+        document.getElementById("editEmployeeName").value =
+          row.cells[1].innerText;
+        document.getElementById("editEmployeeEmail").value =
+          row.cells[2].innerText;
+        document.getElementById("editEmployeeDepartment").value =
+          row.cells[3].innerText;
+        document.getElementById("editEmployeeDesignation").value =
+          row.cells[4].innerText;
+
+        // edit modal
+        $("#editEmployeeModal").modal("show");
+      }
+
+      function saveEditedEmployee() {
+        //  edited values
+        var id = document.getElementById("editEmployeeId").value;
+        var name = document.getElementById("editEmployeeName").value;
+        var email = document.getElementById("editEmployeeEmail").value;
+        var department = document.getElementById(
+          "editEmployeeDepartment"
+        ).value;
+        var designation = document.getElementById(
+          "editEmployeeDesignation"
+        ).value;
+
+        // Update the row 
+        var table = document.querySelector(".table-custom tbody");
+        var row = Array.from(table.rows).find(
+          (r) => r.cells[0].innerText === id
+        );
+
+        if (row) {
+          row.cells[1].innerText = name;
+          row.cells[2].innerText = email;
+          row.cells[3].innerText = department;
+          row.cells[4].innerText = designation;
+        }
+
+        // Clearing the form
+        document.getElementById("editEmployeeForm").reset();
+
+        // Closing the modal
+        $("#editEmployeeModal").modal("hide");
+      }
+
+      function deleteEmployee(button) {
+        // Getting row
+        var row = button.closest("tr");
+
+        // Remove the row
+        row.remove();
+      }
+    </script>
+  </body>
+</html>

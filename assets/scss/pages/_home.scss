@@ -1,0 +1,31 @@
+$body-text-color: #e1e0e0;
+$grid-bg-border: 1px solid rgb(26, 26, 26);
+$grid-bg: rgb(26, 26, 26);
+$button-all: #45aee9;
+$text-blue: #45aee9;
+$purple: #6f42c1;
+
+.grid-bg {
+  background-color: $grid-bg !important;
+  border: $grid-bg-border !important;
+  color: $body-text-color !important;
+  box-shadow: 3px 3px 8px rgb(12, 12, 12);
+}
+.button {
+  border: 1px solid white !important;
+  color: $body-text-color !important;
+}
+.button:hover {
+  background-color: $button-all !important;
+  color: black !important;
+  border: 1px solid rgb(0, 0, 0) !important;
+}
+.text-blue {
+  color: $text-blue;
+}
+.purple {
+  color: $purple;
+}
+.marign-left {
+  margin-left: 10px !important;
+}

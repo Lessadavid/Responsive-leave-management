@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      .bg-index {
+        background-image: url(/assets/images/Login.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        background-color: black;
+      }
+
+      .black-bg {
+        background-color: black;
+      }
+      .blue {
+        background-color: #45aee9;
+      }
+      form {
+        max-width: 400px;
+      }
+
+      .error {
+        color: rgb(197, 55, 55);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <title>Waveworks</title>
+  </head>
+  <body class="bg-index">
+    <div class="p-5">
+      <img src="/assets/images/indexlogo.svg" alt="" />
+    </div>
+    <div class="container rounded mt-5">
+      <form
+        class="border border-secondary bg-black text-light p-4 rounded-3 ms-auto"
+        onsubmit="validateAndSignIn()"
+      >
+        <div class="text-center">
+          <h3>Login</h3>
+        </div>
+
+        <div class="form-group">
+          <label for="username" class="col-sm-2 col-form-label"
+            >Email <span class="text-danger"> *</span>
+          </label>
+          <input
+            type="email"
+            class="form-control border border-secondary bg-transparent text-light"
+            id="username"
+            onchange="validateEmail()"
+          />
+          <div id="cus-em1"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="col-sm-2 col-form-label"
+            >Password<span class="text-danger">*</span>
+          </label>
+          <input
+            type="password"
+            class="form-control border border-secondary bg-transparent text-light"
+            id="password"
+            onchange="validatePassword()"
+          />
+          <div id="cus-ps1"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="user" class="col-sm-2 col-form-label"
+            >User <span class="text-danger"> *</span></label
+          >
+          <select
+            class="form-select border border-secondary bg-transparent text-light"
+            aria-label="Default select example"
+            id="user"
+            onchange="validateUser()"
+          >
+            <option value="" class="bg-dark">Select User</option>
+            <option value="employee" class="bg-dark">Employee</option>
+            <option value="manager" class="bg-dark">Manager</option>
+            <option value="hr" class="bg-dark">HR</option>
+            <option value="admin" class="bg-dark">Admin</option>
+          </select>
+          <div id="user-error"></div>
+        </div>
+
+        <a href="forgetpassword.html" class="text-decoration-none"
+          >Forget password?</a
+        >
+
+        <div class="text-center">
+          <button
+            type="button"
+            class="btn btn-primary mt-4 w-100 blue"
+            onclick="validateAndSignIn()"
+          >
+            Login
+          </button>
+        </div>
+        <p
+          class="p-2"
+          id="checkMeText"
+          style="display: none"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Hint
+        </p>
+      </form>
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        data-bs-theme="dark"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content text-light">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Correct Credentials
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>Email: lessadavid@gmail.com</p>
+              <p>Password: lessad</p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function validateEmail() {
+        var emailInput = document.getElementById("username");
+        var emailError = document.getElementById("cus-em1");
+        // Checking email is lessadavid@gmail.com
+        if (emailInput.value.trim().toLowerCase() !== "lessadavid@gmail.com") {
+          emailError.innerHTML = '<span class="error">Invalid email</span>';
+        } else {
+          emailError.innerHTML = "";
+        }
+      }
+
+      function validatePassword() {
+        var passwordInput = document.getElementById("password");
+        var passwordError = document.getElementById("cus-ps1");
+        // Check if the password is 'lessad'
+        if (passwordInput.value.trim() !== "lessad") {
+          passwordError.innerHTML =
+            '<span class="error">Invalid password</span>';
+        } else {
+          passwordError.innerHTML = "";
+        }
+      }
+
+      function validateUser() {
+        var userSelect = document.getElementById("user");
+        var userError = document.getElementById("user-error");
+        //Check if a user is selected
+        if (userSelect.value.trim() === "") {
+          userError.innerHTML =
+            '<span class="error">Please select a user</span>';
+        } else {
+          userError.innerHTML = "";
+        }
+      }
+
+      function validateAndSignIn() {
+        validateEmail();
+        validatePassword();
+        validateUser();
+
+        var userSelect = document.getElementById("user");
+        var selectedUser = userSelect.value;
+
+        if (
+          document.querySelectorAll(".error").length > 0 ||
+          document.querySelectorAll("input:invalid").length > 0
+        ) {
+          document.getElementById("checkMeText").style.display = "block";
+        } else {
+          document.getElementById("checkMeText").style.display = "none";
+
+          //  different pages
+          switch (selectedUser) {
+            case "employee":
+              window.location.href = "/employee/employeehome.html";
+              break;
+            case "manager":
+              window.location.href = "/manager/managerhome.html";
+              break;
+            case "hr":
+              window.location.href = "/hr/hrhome.html";
+              break;
+            case "admin":
+              window.location.href = "/admin/admin.html";
+              break;
+            default:
+              break;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

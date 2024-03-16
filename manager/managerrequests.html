@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employees requests</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- navigation -->
+    <nav class="navbar nav-bg fixed-top">
+      <!-- offcanvas-toggler -->
+
+      <div class="container-fluid">
+        <button
+          class="btn d-md-none py-0 mt-1 pl-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling"
+        >
+          <i
+            class="bx bx-menu-alt-right fs-4"
+            data-bs-target="#offcanvasScrolling"
+          ></i>
+        </button>
+        <a class="me-auto d-md-none"
+          ><img src="/assets/images/logoonly.svg" alt=""
+        /></a>
+        <form class="d-flex ms-auto mt-2 d-none d-md-block" role="search">
+          <div class="input-group mb-1">
+            <button
+              class="btn btn-dark btn-right"
+              type="button"
+              id="button-addon1"
+            >
+              <i class="bx bx-search fs-5 te text-secondary"></i>
+            </button>
+            <input
+              type="text"
+              class="form-control search-dark"
+              placeholder=""
+              aria-label="Example text with button addon"
+              aria-describedby="button-addon1"
+            />
+          </div>
+        </form>
+        <div>
+          <button class="btn fs-4 py-0"><i class="bx bx-bell"></i></button>
+        </div>
+
+        <div class="btn-group">
+          <button
+            type="button"
+            class="btn dropdown-toggle py-0"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span><img src="/assets/images/topprofile.svg" alt="" /></span>
+          </button>
+          <ul
+            class="dropdown-menu dropdown-menu-end dropdown-menu-dark bg-dark"
+          >
+            <a
+              href="/employee/changepassword.html"
+              class="text-decoration-none"
+            >
+              <li>
+                <button class="dropdown-item text-light" type="button">
+                  <i class="bx bx-cog"></i> Change password
+                </button>
+              </li></a
+            >
+            <a href="/index.html" class="text-decoration-none">
+              <li>
+                <button class="dropdown-item text-light" type="button">
+                  <i class="bx bx-exit"></i> Logout
+                </button>
+              </li></a
+            >
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- responsive form -->
+    <form
+      class="d-flex ms-auto mt-3 py-2 px-3 d-md-none res-search"
+      role="search"
+    >
+      <div class="input-group mt-5">
+        <button
+          class="btn btn-secondary btn-right"
+          type="button"
+          id="button-addon1"
+        >
+          <i class="bx bx-search fs-5 te text-dark"></i>
+        </button>
+        <input
+          type="text"
+          class="form-control search-light text-white"
+          placeholder=""
+          aria-label="Example text with button addon"
+          aria-describedby="button-addon1"
+        />
+      </div>
+    </form>
+    <!-- responsive form -->
+    <div
+      class="offcanvas offcanvas-start sidebar-nav"
+      data-bs-scroll="true"
+      data-bs-backdrop="false"
+      tabindex="-1"
+      id="offcanvasScrolling"
+      aria-labelledby="offcanvasScrollingLabel"
+    >
+      <div class="offcanvas-header px-3 py-4">
+        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+          <img src="/assets/images/logo.svg" alt="" class="mx-3" />
+        </h5>
+        <button
+          type="button"
+          class="btn-close d-md-none btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="list-unstyled px-2 list-ul">
+          <li class="">
+            <div class="text-decoration-none my-2 px-2 py-2 d-block">
+              <span class="px-5"
+                ><img src="/assets/images/profile.svg" alt=""  width="109px"
+                height="109px"
+              /></span>
+            </div>
+          </li>
+          <div class="text-center">
+            <li class="text-white">Lessa david</li>
+            <li class="text-secondary">lessadavid100@gmail.com</li>
+          </div>
+          <hr class="text-white" />
+          <li class="">
+            <a
+              href="/manager/managerhome.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+              ><span><i class="bx bx-home"></i></span
+              ><span class="px-2">Home</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/manager/managerrequests.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bxs-inbox"></i></span
+              ><span class="px-2">Inbox</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/manager/managerhistory.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bx-spreadsheet"></i></span
+              ><span class="px-2">My Team</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/manager/managerteamcalendar.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bx-calendar-alt"></i></span
+              ><span class="px-2">Team Calendar</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/manager/managerprofile.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bx-user"></i></span
+              ><span class="px-2">Profile</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <main class="mt-md-5 pt-4">
+      <div class="container-fluid">
+        <h6 class="text-white py-2" ><i class='bx bx-briefcase-alt-2'></i> Leave Requests</h6>
+        <div class="table-responsive">
+        <table class="table-custom">
+          <tr>
+            <thead>
+            <th scope="col" >SI.NO</th>
+            <th scope="col">Name</th>
+            <th scope="col">Emp Id</th> 
+            <th scope="col">Leave Period</th>
+            <th scope="col">Type</th>
+            <th scope="col">Reason</th>
+            <th scope="col">Status</th>
+            <th scope="col" colspan="2" class="text-center">Action</th> 
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="row1">
+              <td>1.</td>
+              <td>David lee</td>
+              <td>E010</td>
+              <td>4th Dec 2023</td>
+              <td>Sick leave</td>
+              <td>Doctor's appointment</td>
+              <td id="status1">Pending</td>
+              <td>
+                  <button class="btn btn-danger px-2 mx-1 custom-btn" data-bs-toggle="modal"
+                          data-bs-target="#rejectModal1">
+                      <div class="d-flex "><i class="bi bi-x-lg"></i> <div class="pl-2">Reject</div></div>
+                  </button>
+              </td>
+              <td>
+                  <button class="btn btn-success px-2" data-bs-toggle="modal" data-bs-target="#acceptModal1"
+                          onclick="handleAccept(1)">
+                      <div class="d-flex "> <i class="bi bi-check2"></i> <div>Accept</div></div>
+                  </button>
+              </td>
+          </tr>
+          <tr>
+            <td>2.</td>
+            <td>David lee</td>
+            <td>E010</td>
+            <td>4th Dec 2023</td>
+            <td>Sick leave</td>
+            <td>Celebrating a special occasion.</td>
+            <td id="status1">Pending</td>
+            <td>
+              <button class="btn btn-danger px-2 mx-1 custom-btn" data-bs-toggle="modal"
+                      data-bs-target="#rejectModal1">
+                  <div class="d-flex "><i class="bi bi-x-lg"></i> <div class="pl-2">Reject</div></div>
+              </button>
+          </td>
+          <td>
+              <button class="btn btn-success px-2" data-bs-toggle="modal" data-bs-target="#acceptModal1"
+                      onclick="handleAccept(1)">
+                  <div class="d-flex "> <i class="bi bi-check2"></i> <div>Accept</div></div>
+              </button>
+          </td>
+          </tr>
+          <tr>
+            <td>3.</td>
+            <td>David lee</td>
+            <td>E010</td>
+            <td>4th Dec 2023</td>
+            <td>Sick leave</td>
+            <td>Doctor's appointment</td>
+            <td id="status1">Pending</td>
+            <td>
+              <button class="btn btn-danger px-2 mx-1 custom-btn" data-bs-toggle="modal"
+                      data-bs-target="#rejectModal1">
+                  <div class="d-flex "><i class="bi bi-x-lg"></i> <div class="pl-2">Reject</div></div>
+              </button>
+          </td>
+          <td>
+              <button class="btn btn-success px-2" data-bs-toggle="modal" data-bs-target="#acceptModal1"
+                      onclick="handleAccept(1)">
+                  <div class="d-flex "> <i class="bi bi-check2"></i> <div>Accept</div></div>
+              </button>
+          </td>
+          </tr>
+          <tr>
+            <td>4.</td>
+            <td> Alex sen</td>
+            <td>E013</td>
+            <td>4th Dec 2023</td>
+            <td>Sick leave</td>
+            <td>To attend a family event.</td>
+            <td id="status1">Pending</td>
+            <td>
+              <button class="btn btn-danger px-2 mx-1 custom-btn" data-bs-toggle="modal"
+                      data-bs-target="#rejectModal1">
+                  <div class="d-flex "><i class="bi bi-x-lg"></i> <div class="pl-2">Reject</div></div>
+              </button>
+          </td>
+          <td>
+              <button class="btn btn-success px-2" data-bs-toggle="modal" data-bs-target="#acceptModal1"
+                      onclick="handleAccept(1)">
+                  <div class="d-flex "> <i class="bi bi-check2"></i> <div>Accept</div></div>
+              </button>
+          </td>
+          </tr>
+          <tr>
+            <td>5.</td>
+            <td>Shyla kilo</td>
+            <td>E012</td>
+            <td>4th Dec 2023</td>
+            <td>Sick leave</td>
+            <td>Doctor's appointment</td>
+            <td>Pending</td>
+            <td>
+              <button class="btn btn-danger px-2 mx-1 custom-btn" data-bs-toggle="modal"
+                      data-bs-target="#rejectModal1">
+                  <div class="d-flex "><i class="bi bi-x-lg"></i> <div class="pl-2">Reject</div></div>
+              </button>
+          </td>
+          <td>
+              <button class="btn btn-success px-2" data-bs-toggle="modal" data-bs-target="#acceptModal1"
+                      onclick="handleAccept(1)">
+                  <div class="d-flex "> <i class="bi bi-check2"></i> <div>Accept</div></div>
+              </button>
+          </td>
+          </tr>
+          <tr>
+            <td>6.</td>
+            <td> Timothee</td>
+            <td>E011</td>
+            <td>4th Dec 2023</td>
+            <td>Sick leave</td>
+            <td>To attend a family event.</td>
+            <td>Pending</td>
+            <td>
+              <button class="btn btn-danger px-2 mx-1 custom-btn" data-bs-toggle="modal"
+                      data-bs-target="#rejectModal1">
+                  <div class="d-flex "><i class="bi bi-x-lg"></i> <div class="pl-2">Reject</div></div>
+              </button>
+          </td>
+          <td>
+              <button class="btn btn-success px-2" data-bs-toggle="modal" data-bs-target="#acceptModal1"
+                      onclick="handleAccept(1)">
+                  <div class="d-flex "> <i class="bi bi-check2"></i> <div>Accept</div></div>
+              </button>
+          </td>
+          </tr>
+
+          </tbody>
+      </table>
+
+      <!-- Reject Modal -->
+      <div class="modal fade " id="rejectModal1" tabindex="-1" aria-labelledby="rejectModalLabel1"
+           aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content bg-dark text-light">
+                  <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="rejectModalLabel1">Reject</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      Are you sure you want to reject the request?
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-danger" onclick="handleReject(1)">Reject</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Accept Modal -->
+      <div class="modal fade " id="acceptModal1" tabindex="-1" aria-labelledby="acceptModalLabel1"
+           aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content grid-bg text-light">
+                  <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="acceptModalLabel1">Accept</h1>
+                      <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal"
+                              aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      Request accepted successfully.
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" onclick="handleAcceptModal(1)">Save changes</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    </div>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+   // Updating status in the table based on the row index
+  function handleAccept(index) {  
+      var statusElement = document.getElementById('status' + index);
+      if (statusElement) {
+          statusElement.innerText = 'Accepted';
+      }
+  }
+ // Rejected
+  function handleReject(index) {
+      var statusElement = document.getElementById('status' + index);
+      if (statusElement) {
+          statusElement.innerText = 'Rejected';
+      }
+      $('#rejectModal' + index).modal('hide');
+  }
+   //Accept
+  function handleAcceptModal(index) {
+    var statusElement = document.getElementById('status' + index);
+      if (statusElement) {
+          statusElement.innerText = 'Accepted';
+      }
+
+      // Close 
+      $('#acceptModal' + index).modal('hide');
+  }
+</script>
+  </body>
+</html>

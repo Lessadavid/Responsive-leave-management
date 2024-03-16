@@ -1,0 +1,107 @@
+:root {
+  --primary-color: #282828ad;
+  --text-color: #e1e1e1;
+  --bg-color: rgb(26, 26, 26);
+}
+
+.container-cal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calendar {
+  width: 100%;
+  background: var(--bg-color);
+  padding: 20px;
+  border-radius: 7px;
+}
+.calendar .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #b8b8b8;
+}
+.calendar .header .month {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+.calendar .header .btns-cal {
+  display: flex;
+  gap: 10px;
+}
+.calendar .header .btns-cal .btn-cal {
+  width: 50px;
+  height: 40px;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.calendar .header .btns-cal .btn-cal:hover {
+  background: #313131;
+}
+.calendar .weekdays {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.calendar .weekdays .day {
+  width: calc(100% / 7 - 10px);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+.calendar .days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.calendar .days .day {
+  width: calc(100% / 7 - 10px);
+  height: 50px;
+  background: #151515;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color);
+  transition: all 0.3s;
+  user-select: none;
+  padding: 10px;
+}
+.calendar .days .day:not(.next):not(.prev):hover {
+  color: #fff;
+  background: var(--primary-color);
+}
+.calendar .days .day.next,
+.calendar .days .day.prev {
+  color: #ccc;
+}
+.calendar .days .day.today {
+  color: #fff;
+  background: var(--primary-color);
+}
+.credits a {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #aaa;
+}
+.credits span {
+  color: var(--primary-color);
+}

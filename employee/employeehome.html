@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee home</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- navigation -->
+    <nav class="navbar nav-bg fixed-top">
+      <!-- offcanvas-toggler -->
+
+      <div class="container-fluid">
+        <button
+          class="btn d-md-none py-0 mt-1 pl-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling"
+        >
+          <i
+            class="bx bx-menu-alt-right fs-4"
+            data-bs-target="#offcanvasScrolling"
+          ></i>
+        </button>
+        <a class="me-auto d-md-none"
+          ><img src="/assets/images/logoonly.svg" alt=""
+        /></a>
+        <form class="d-flex ms-auto mt-2 d-none d-md-block" role="search">
+          <div class="input-group mb-1">
+            <button
+              class="btn btn-dark btn-right"
+              type="button"
+              id="button-addon1"
+            >
+              <i class="bx bx-search fs-5 te text-secondary"></i>
+            </button>
+            <input
+              type="text"
+              class="form-control search-dark"
+              placeholder=""
+              aria-label="Example text with button addon"
+              aria-describedby="button-addon1"
+            />
+          </div>
+        </form>
+        <div>
+          <button class="btn fs-4 py-0"><i class="bx bx-bell"></i></button>
+        </div>
+
+        <div class="btn-group">
+          <button
+            type="button"
+            class="btn dropdown-toggle py-0"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span><img src="/assets/images/topprofile.svg" alt="" /></span>
+          </button>
+          <ul
+            class="dropdown-menu dropdown-menu-end dropdown-menu-dark bg-dark"
+          >
+            <a
+              href="/employee/changepassword.html"
+              class="text-decoration-none"
+            >
+              <li>
+                <button class="dropdown-item text-light" type="button">
+                  <i class="bx bx-cog"></i> Change password
+                </button>
+              </li></a
+            >
+            <a href="/index.html" class="text-decoration-none">
+              <li>
+                <button class="dropdown-item text-light" type="button">
+                  <i class="bx bx-exit"></i> Logout
+                </button>
+              </li></a
+            >
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- responsive form -->
+    <form
+      class="d-flex ms-auto mt-3 py-2 px-3 d-md-none res-search"
+      role="search"
+    >
+      <div class="input-group mt-5">
+        <button
+          class="btn btn-secondary btn-right"
+          type="button"
+          id="button-addon1"
+        >
+          <i class="bx bx-search fs-5 te text-dark"></i>
+        </button>
+        <input
+          type="text"
+          class="form-control search-light text-white"
+          placeholder=""
+          aria-label="Example text with button addon"
+          aria-describedby="button-addon1"
+        />
+      </div>
+    </form>
+
+    <!-- responsive form -->
+    <div
+      class="offcanvas offcanvas-start sidebar-nav"
+      data-bs-scroll="true"
+      data-bs-backdrop="false"
+      tabindex="-1"
+      id="offcanvasScrolling"
+      aria-labelledby="offcanvasScrollingLabel"
+    >
+      <div class="offcanvas-header px-3 py-4">
+        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+          <img src="/assets/images/logo.svg" alt="" class="mx-3" />
+        </h5>
+        <button
+          type="button"
+          class="btn-close d-md-none btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="list-unstyled px-2 list-ul">
+          <li class="">
+            <div class="text-decoration-none my-2 px-2 py-2 d-block">
+              <span class="px-5"
+                ><img
+                  src="/assets/images/profile.svg"
+                  alt=""
+                  width="109px"
+                  height="109px"
+              /></span>
+            </div>
+          </li>
+          <div class="text-center">
+            <li class="text-white">Lessa david</li>
+            <li class="text-secondary">lessadavid100@gmail.com</li>
+          </div>
+          <hr class="text-white" />
+          <li class="">
+            <a
+              href="/employee/employeehome.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+              ><span><i class="bx bx-home"></i></span
+              ><span class="px-2">Home</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/employee/employeeapplyleave.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bx-calendar-check"></i></span
+              ><span class="px-2">Apply leave</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/employee/employeehistory.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bx-spreadsheet"></i></span
+              ><span class="px-2">My leave</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/employee/employeecalendar.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bx-calendar-alt"></i></span
+              ><span class="px-2">Calendar</span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/employee/employeeprofile.html"
+              class="text-decoration-none my-2 px-3 py-2 d-block d-flex"
+            >
+              <span><i class="bx bx-user"></i></span
+              ><span class="px-2">Profile</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- navigation -->
+    <main class="mt-md-5 pt-4">
+      <div class="container-fluid">
+        <h6 class="text-light mb-3"><i class="bx bxs-home"></i> Home</h6>
+        <div class="row">
+          <div class="col-lg-6 mb-3">
+            <div class="card grid-bg h-100">
+              <div class="card-body d-flex justify-content-between">
+                <div>
+                  <h5 class="card-title">
+                    Welcome <span class="text-blue">Lessa!</span>
+                  </h5>
+                  <p class="card-text pt-2">
+                    Ready to take a break? Requesting leave is just a click
+                    away.
+                  </p>
+                  <a href="/employee/applyingleave.html" class="btn button"
+                    >Apply Leave</a
+                  >
+                </div>
+                <div>
+                  <img
+                    src="/assets/images/rm-home1.svg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 mb-3">
+            <div class="card grid-bg h-100">
+              <div class="card-body">
+                <h5 class="card-title">Leave balance</h5>
+                <p class="card-text">
+                  <span class="fs-1 text-blue">28</span>
+                  Remaining annual leave entitlement for this year.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 mb-3">
+            <div class="card grid-bg h-100">
+              <div class="card-body">
+                <h5 class="card-title">Leave Usage</h5>
+                <p class="card-text">
+                  <span class="fs-1 text-blue">18</span>
+                  Utilized annual leave allocation for this year
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 mb-3">
+            <div class="card grid-bg h-100">
+              <div class="card-body">
+                <div>
+                  <h5 class="card-title mb-3">
+                    <i class="bx bx-chart"></i> My Latest leave
+                  </h5>
+                  <div
+                    class="d-flex justify-content-between border border-secondary p-2 border-opacity-25 mb-2"
+                  >
+                    <p class="card-text pt-2">
+                      Unpaid leave (UPL) from 24.01.2024 - 26.01.2024
+                    </p>
+                    <button class="btn pending btn-outline-secondary px-2">
+                      <div class="d-flex column-gap-1">
+                        <i class="bx bx-time-five mt-1"></i>
+                        <div>Pending</div>
+                      </div>
+                    </button>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between border border-success p-2 border-opacity-25 mb-2"
+                  >
+                    <p class="card-text pt-2">
+                      Unpaid leave (UPL) from 24.01.2024 - 26.01.2024
+                    </p>
+                    <button class="btn accepted btn-outline-success px-1">
+                      <div class="d-flex column-gap-1">
+                        <i class="bi bi-check2"></i>
+                        <div>Accepted</div>
+                      </div>
+                    </button>
+                  </div>
+
+                  <div
+                    class="d-flex justify-content-between border border-danger p-2 border-opacity-25 mb-2"
+                  >
+                    <p class="card-text pt-2">
+                      Unpaid leave (UPL) from 24.01.2024 - 26.01.2024
+                    </p>
+                    <button class="btn rejected btn-outline-danger px-2">
+                      <div class="d-flex column-gap-1">
+                        <i class="bi bi-x-lg"></i>
+                        <div>Rejected</div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-3">
+            <div class="card grid-bg h-100">
+              <div class="card-body">
+                <h5 class="card-title mb-3">
+                  <i class="bx bxs-calendar-star"></i> Upcoming holidays
+                </h5>
+                <div
+                  class="d-flex justify-content-between border border-secondary px-3 border-opacity-25 py-1 mb-3"
+                >
+                  <p class="card-text pt-2">Christmas</p>
+                  <div class="pt-2">25 Dec 2023</div>
+                </div>
+                <div
+                  class="d-flex justify-content-between border border-secondary px-3 border-opacity-25 py-1 mb-3"
+                >
+                  <p class="card-text pt-2">Newyear</p>
+                  <div class="pt-2">1 Jan 2024</div>
+                </div>
+                <div
+                  class="d-flex justify-content-between border border-secondary px-3 border-opacity-25 py-1"
+                >
+                  <p class="card-text pt-2">Lohri</p>
+                  <div class="pt-2">13 Jan 2024</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-5 mb-3">
+            <div class="card grid-bg h-100">
+              <div class="card-body">
+                <div>
+                  <h5 class="card-title mb-3">
+                    <i class="bi bi-megaphone"></i> Announcements
+                  </h5>
+                  <div
+                    class="border border-secondary border-opacity-25 p-3 d-flex justify-content-between"
+                  >
+                    <p class="card-text mb-1">
+                      A scheduled holiday has been planned.
+                    </p>
+                    <div><small class="text-secondary">29 jan 2024</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-3">
+            <div class="card grid-bg h-100">
+              <div class="card-body">
+                <h5 class="card-title mb-3">
+                  <i class="bi bi-person"></i> Approver
+                </h5>
+                <div class="d-flex">
+                  <div class="">
+                    <img src="/assets/images/approver.svg" alt="" class="" />
+                  </div>
+                  <div class="marign-left">
+                    Davidson lee
+                    <div class="text-secondary">Team lead</div>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <p class="text-secondary col-6">
+                    <small>
+                      <i class="bx bx-envelope"></i> davidson@gmail.com</small
+                    >
+                  </p>
+                  <p class="text-secondary col-6">
+                    <small><i class="bx bxs-phone-call"></i> 8838551698</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
